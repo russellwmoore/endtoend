@@ -3,7 +3,6 @@ const app = express();
 const { db, User, Task, Session } = require('./db');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
 const uuidv4 = require('uuid/v4');
 
 const PORT = 3000;
@@ -11,7 +10,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cookieParser());
 if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
+  app.use(require('morgan')('dev'));
 }
 
 app.use((req, res, next) => {
