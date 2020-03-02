@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "npm run build & npm run start",
-    "build": "webpack --mode development -w",
-    "start": "nodemon index.js"
+    "start:dev": "npm run build:dev & npm run startup",
+    "build:dev": "webpack --mode development -w",
+    "startup": "nodemon index.js",
+    "build": "webpack --mode production",
+    "start": "NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "",
