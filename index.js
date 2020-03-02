@@ -106,7 +106,7 @@ app.get('*', (req, res, next) => {
 
 db.sync()
   .then(() => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || PORT, () => {
       console.log(`Listening on port ${PORT}`);
     });
   })
