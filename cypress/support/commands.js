@@ -31,3 +31,13 @@ Cypress.Commands.add('login', (email, pw) => {
   cy.get('#password').type(pw);
   cy.get('#login-submit').click();
 });
+Cypress.Commands.add('hotlogin', (email, pw) => {
+  cy.request({
+    method: 'POST',
+    url: 'http://localhost:3000/auth/login',
+    body: {
+      email: 'r@r.com',
+      password: '123',
+    },
+  });
+});

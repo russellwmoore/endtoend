@@ -46,4 +46,14 @@ describe('Login Functionality', () => {
 
     cy.contains('Wrong Username or Password');
   });
+
+  it('Log out navigates back to home page', () => {
+    cy.visit('/');
+
+    cy.hotlogin();
+    cy.visit('/tasks');
+    cy.get('[cy-data=sign-out-button]').click();
+
+    cy.location('pathname').should('eq', '/');
+  });
 });
