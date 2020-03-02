@@ -8,7 +8,10 @@
     "build:dev": "webpack --mode development -w",
     "startup": "nodemon index.js",
     "build": "webpack --mode production",
-    "start": "NODE_ENV=production node index.js"
+    "start": "NODE_ENV=production node index.js",
+    "ci": "npm run build && npm run ci:cy-run",
+    "ci:cy-run": "npm run start-server-and-test npm run start 3000 npm run cy:run",
+    "cy:run": "npm run cypress run"
   },
   "keywords": [],
   "author": "",
