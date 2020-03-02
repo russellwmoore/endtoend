@@ -98,7 +98,7 @@ app.get('/auth/me', (req, res, next) => {
   if (req.user) {
     return res.send(req.user);
   }
-  res.send('not logged in');
+  res.send('not logged in. Hi From auth/me route!');
 });
 
 app.get('*', (req, res, next) => {

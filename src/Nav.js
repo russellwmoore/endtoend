@@ -13,7 +13,12 @@ class Nav extends React.Component {
       <>
         <h3>
           {this.props.isLoggedIn ? (
-            <button type="button" onClick={this.props.logOut}>
+            <button
+              id="sign-out"
+              cy-data="sign-out-button"
+              type="button"
+              onClick={this.props.logOut}
+            >
               Sign Out
             </button>
           ) : (
