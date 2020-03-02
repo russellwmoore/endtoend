@@ -4,7 +4,8 @@ node_js:
 addons:
   chrome: stable
   apt:
-    packages: - libgconf-2-4
+    packages:
+      - libgconf-2-4
 cache:
   npm: true
   directories:
