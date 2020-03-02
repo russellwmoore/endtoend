@@ -39,6 +39,7 @@
     "cypress": "^4.1.0",
     "morgan": "^1.9.1",
     "redux-logger": "^3.0.6",
+    "start-server-and-test": "^1.10.8",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }
